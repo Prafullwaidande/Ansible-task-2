@@ -1,0 +1,19 @@
+ hosts: all
+  vars:
+          - sname: "httpd"
+  tasks:
+          - name: Download software
+            package: 
+               name: "{{ sname }}"
+               state: present
+               
+          - name: Get url rom internet
+            copy: 
+               dest: "/var/www/html/"
+               src: "home.html"
+        
+          - name: Start the service
+            service: 
+               name: "{{ sname }}"
+               state: started
+               enabled: yes
