@@ -5,7 +5,7 @@
   tasks:
           - name: provision os on aws
             ec2:
-                    key_name: "mykey11122"
+                    key_name: "mykey1234"
                     instance_type: "t2.micro"
                     image: "ami-0ebc1ac48dfd14136"
                     wait: yes
